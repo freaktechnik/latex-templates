@@ -1,6 +1,6 @@
-# Latex Templates
+# LaTeX Templates
 
-Templates for Latex documents I often use. Most of them are geared toward German
+Templates for LaTeX documents I often use. Most of them are geared toward German
 contents.
 
 ## meetingminsde Class
