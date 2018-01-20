@@ -5,3 +5,6 @@
 *.pdf
 *.gz
 *.dvi
+*.out
+*.glo
+*.idx
