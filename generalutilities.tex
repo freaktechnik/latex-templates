@@ -1,0 +1,165 @@
+\section{Utilities}
+    \subsection{Binomialkoeffizienten}
+        $\binom{n}{k} = \frac{n!}{k!\cdot(n-k)!}$
+    \subsection{Bekannte Ableitungen}
+        $\ln(x)' = \frac{1}{x} $ \\
+        $\sin'{x} = \cos{x}$ \\
+        $\cos'{x} = -\sin{x}$ \\
+        $\tan'{x}=\frac{1}{\cos{x}^{2}} = 1 + \tan{x}^{2}$ \\
+        $\arcsin'{x} = \frac{1}{\sqrt{1-x^{2}}}$ \\
+        $\arccos'{x} = -\arcsin'{x}$ \\
+        $\arctan'{x} = \frac{1}{1+x^{2}}$ \\
+        $\sinh'{x} = \cosh{x}$ \\
+        $\cosh'{x} = \sinh{x}$ \\
+        $\tanh'{x} = \frac{1}{\cosh{x}^{2}} = 1 - \tanh{x}^{2}$ \\
+        $\left(\frac{x^{\frac{3}{2}}}{\frac{3}{2}}\right)' = \sqrt{x}$
+    \subsection{DGL Ansätze}
+        \subsubsection{Homogen}
+            $y(t) = e^{\lambda t}$
+        \subsubsection{Inhomogen}
+            $K(t)$ sei der Störfaktor (0 bei homogener DGL).
+            \begin{tabular}{|p{2cm}|p{2.5cm}|p{3.6cm}|}
+                \hline
+                K(t) & Bedingung & Ansatz für $y_p(t)$ \\
+                \hline
+                \multirow{2}{*}{$t^r$} & 0 keine 0-Stelle & $A_0+a_1t+\dotsb+A_rt^r$ \\ \cline{2-3}
+                & 0 $m$-fache 0-Stelle & $A_0t^m+A_11t^{m+1}+\dotsb+A_rt^{m+r}$ \\
+                \hline
+                $b_0+b_1t+\dotsb+b_rt^r, b_i\in\mathbb{R}$ & 0 keine 0-Stelle & $A_0+A_1t+\dotsb+A_rt^r$ \\
+                \hline
+                \multirow{2}{*}{$e^{\lambda_0 t}, \lambda_0 \in \mathbb{C}$} & $\lambda_0$ keine 0-Stelle & $Ae^{\lambda_0 t}$ mit $A=\frac{1}{\lambda^n+a_{n-1}\lambda^{n-1}+\dotsb+a_1\lambda+a_0}$ \\ \cline{2-3}
+                & $\lambda_0$ $m$-fache 0-Stelle & $At^me^{\lambda_0t}$ \\
+                \hline
+                \multirow{2}{*}{$\cos(\omega t), \sin(\omega t)$} & $\pm i\omega$ keine 0-Stelle & $A\cos(\omega t) + B\sin(\omega t)$ \\ \cline{2-3}
+                & $\pm i\omega$ mehrfache 0-Stelle & $t(A\cos(\omega t)+B\sin(\omega t))$ \\
+                \hline
+                $t^2e^{-t}$ & $-1$ keine 0-Stelle & $(A_0+A_1t + A_2t^2)e^{-t}$ \\
+                \hline
+            \end{tabular}
+    \subsection{Begriffe}
+        Bijektiv: umkehrbar eindeutig (surjektiv \& injektiv) $\forall y \in B:\exists! x \in A: f(x) = y$\\
+        Surjektiv: jeder Wert der Zielbereich (Wertemenge) wird angenommen $\rightarrow$ Wertemenge = Bildmenge $\forall y \in B: \exists x \in A: f(x) = y$\\
+        Injektiv: jeder Wert der Bildmenge (Lösungsmenge) wird genau einmal angenommen $\forall x, x' \in A: f(x) = f(x') \Rightarrow x = x'$\\
+        Disjunkt: Komplett verschieden \\
+        Monotonie: $\forall x, x' \in I; x < x' \Rightarrow f(x) \leqslant f(x')$ \\
+        Streng monoton: $\forall x, x' \in I: x < x' \Rightarrow f(x) < f(x')\Rightarrow$ bijektiv;  $f'(x) > 0\Rightarrow$ streng monoton wachsend
+    \subsection{Trigonometrie \/ Goniometiere}
+        $\sinh^2x-\cosh^2x=1$ \\
+        $\sin^2x+\cos^2x=1$ \\
+        $\sin{x}\cos{y} = \frac{1}{2}(\sin(x - y)+\sin(x + y))$ \\
+        $\sin{x}\sin{x} = \frac{1-\cos(2x)}{2}$ \\
+        $\cos(\arcsin(x)) = \sqrt{1-x^2}$ \\
+        $\sin(2 \arcsin(x)) = 2x\sqrt{1-x^2}$ \\
+        $\sin(x\pm y) = \sin{x}\cos{y}\pm\sin{y}\cos{x}$ \\
+        $\cos(x\pm y) = \cos{x}\cos{y}\mp\sin{x}\sin{y}$ \\
+        $\sin(2x) = 2\sin{x}\cos{x} = \frac{2\tan{x}}{1+\tan^2(x)}$ \\
+        $\cos(2x) = \cos^2(x)-\sin^2(x) = 1-2\sin^2(x)$ \\
+        $\sin^2(x) = \frac{1}{2}(1-\cos(2x))$ \\
+        $\cos^2(x) = \frac{1}{2}(1+\cos(2x))$ \\
+        $\sin{x}+\sin{y} = 2\sin\left(\frac{x+y}{2}\right)\cos\left(\frac{x-y}{2}\right)$ \\
+        $\sin{x}-\sin{y} = 2\cos\left(\frac{x+y}{2}\right)\sin\left(\frac{x-y}{2}\right)$ \\
+        $\cos{x}+\cos{y} = 2\cos\left(\frac{x+y}{2}\right)\cos\left(\frac{x-y}{2}\right)$ \\
+        $\cos{x}-\cos{y} = 2\sin\left(\frac{x+y}{2}\right)\sin\left(\frac{x-y}{2}\right)$
+	\subsubsection{Funktionswerte}
+		\begin{tabular}{l|l l l l l}
+			$\varphi$ & 0° & 30° & 45° & 60° & 90° \\
+			\hline
+			$\sin{\varphi}$ & $0$ & $\frac{1}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{3}}{2}$ & $1$ \\
+			$\cos{\varphi}$ & $1$ & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & $0$ \\
+			$\tan{\varphi}$ & $0$ & $\frac{\sqrt{3}}{3}$ & $1$ & $\sqrt{3}$ & - \\
+		\end{tabular}
+    \subsection{Geometrie}
+        \subsubsection{Kreis}
+            Kreismenge: $\{x^2+y^2\leq R^2\}$ \\
+            Fläche: $A=\pi r^2$\\
+            Umfang: $U=2\pi r$
+        \subsubsection{Kugel}
+            Fläche: $A=4\pi r^2$ \\
+            Volumen: $\frac{4}{3}\pi r^3$
+        \subsubsection{Dreiecke}
+            $r = \frac{abc}{4a} = \frac{a}{2\sin{\alpha}}$: Umkreisradius \\
+            $s = \frac{a+b+c}{2}$ \\
+            $A = \frac{1}{2}ah = \frac{abc}{4r} = \sqrt{s(s-a)(s-b)(s-c)}$
+            \begin{theorem}[Cosinussatz]
+                $a^{2} = b^{2} + c^{2} + 2bc\cos{\alpha}$
+            \end{theorem}
+            \begin{theorem}[Sinussatz]
+                $\frac{a}{\sin{\alpha}} = 2r$
+            \end{theorem}
+            \paragraph{Gleichschenkliges Dreieck}
+                $h = r = \frac{\sqrt{2}}{2}a, A = \frac{1}{2}a^{2}$
+            \subsubsubsection{Gleichseitiges Dreieck}
+                $h = \frac{\sqrt{3}}{2}a, a= \frac{\sqrt{3}}{4}a^{2}$
+            \subsubsubsection{Rechtwinkliges Dreieck}
+                $h^{2} = pq, a^{2} = pc, b^{2} = qc, h = \frac{ab}{c}$
+        \subsubsection{Vierecke}
+            \subsubsubsection{Quadrat}
+                $d = \sqrt{2}a, r = \frac{d}{2}$
+            \subsubsubsection{Rechteck}
+                Diagonalen $e = f= \sqrt{a^{2} + b^{2}}$
+            \subsubsubsection{Parallelogramm}
+                $e^{2} + f^{2} = 2(a^{2} + b^{2})$ \\
+                $A= ab\sin{\alpha} = ah_{a} = bh_{b}$
+    \subsection{Physikalische Grössen}
+        Masse mit Dichte $\mu$: $m(x) = \int_{X} \mu (x) \, \mathrm{dvol}_n(x)$ \\
+        Schwerpunkt: $S(x) = m(x)^{-1} \int_{X} x\mu(x) \, \mathrm{dvol}_n (x)$ \\
+        Drehmoment: $M= J\alpha$ \\
+        Trägheitsmoment: $J = \int_{X} \vec{r}^2_{\bot} \mu(x) \, \mathrm{d} x$
+    \subsection{Einheiten}
+        $10^5 Pa = 1 Bar$ \\
+        $1atm = 1.01325 bar = 101325 Pa$ \\
+        $1 bar = 14.5 PSI$
+        $1 kWh = 3.6\cdot 10^6J$
+        $0° C = 273.2 K$
+        \subsubsection{Grössenbeschreiber}
+            \begin{tabular}{l l | l l}
+                atto & $10^{-18}$ & Exa & $10^{18}$ \\
+                femto & $10^{-15}$ & Peta & $10^{15}$ \\
+                pico & $10^{-12}$ & Tera & $10^{12}$ \\
+                nano & $10^{-9}$ & Giga & $10^9$ \\
+                mikro & $10^{-6}$ & Mega & $10^6$ \\
+                mili & $10^{-3}$ & Kilo & $10^3$ \\
+                centi & $10^{-2}$ & Hekto & $10^2$ \\
+                dezi & $10^{-1}$ & Deka & $10$ \\
+            \end{tabular}
+    \subsection{Vektoren}
+        Skalarprodukt: $\vec{a}\cdot\vec{b}=x_a\cdot x_b+y_a\cdot y_b$ etc. \\
+        Vektorprodukt: $\vec{a}\times\vec{b}= \begin{pmatrix}
+            a_2b_3 - a_3b_2 \\
+            a_3b_1 - a_1b_3 \\
+            a_1b_2 - a_2b_1
+        \end{pmatrix}$ \\
+        $|\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin{\varphi}$ \\
+        $\mathrm{det}\begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix} = ad - bc$
+    \subsection{Koordinaten}
+        \subsubsection{Kartesische}
+            $x = r\cos\varphi = r\cos\rho\cos\varphi$ \\
+            $y = r\sin\varphi = r\sin\rho\sin\varphi$ \\
+            $z = r\sin\rho$
+        \subsubsection{Zylinder}
+            $r=\sqrt{x^2+y^2}; \varphi = \arctan{\frac{x}{y}}; z$
+        \subsubsection{Kugel}
+            $r=\sqrt{x^2+y^2+z^2}; \varphi = \arctan{\frac{x}{y}}; \rho$
+    \subsection{Bekannte Reihen}
+        $\displaystyle (1+x)^a = \sum_{k=0}^{\infty}\binom{a}{k}x^k$ \\
+        $\displaystyle \frac{1}{1-\frac{z}{c}} = \sum_{k=0}^{\infty}\left(\frac{z}{c}\right)^k$ für $|z| < c$ \\
+        $\displaystyle \sin{x} = \sum_{k=0}^{\infty}\frac{(-1)^k\cdot x^{2k+1}}{(2k+1)!}$ \\
+        $\displaystyle \cos{x} = \sum_{k=0}^{\infty}\frac{(-1)^k\cdot x^{2k}}{(2k)!}$ \\
+        $\displaystyle \sinh{x} = \sum_{k=0}^{\infty}\frac{x^{2k+1}}{(2k+1)!}$ \\
+        $\displaystyle \cosh{x} = \sum_{k=0}^{\infty}\frac{x^{2k}}{(2k)!}$ \\
+        $\displaystyle e^z = \sum_{k=0}^{\infty}\frac{z^k}{k!}$ \\
+        $\displaystyle \ln(1+x) = \sum_{k=1}^{\infty}\frac{(-1)^{k+1}x^k}{k!}$
+    \subsection{Komplexe Zahlen}
+        $(a+\imath b)(c+\imath d)=(ac-bd)+\imath(ad+bc)$ \\
+        $\displaystyle\frac{a+\imath b}{c+\imath d}=\frac{ac+bd}{c^2+d^2}+\imath\frac{bc-ad}{c^2+d^2}$ \\
+        $\displaystyle \sqrt[n]{z}=\sqrt[n]{|z|}\cdot e^{\imath\left(\frac{\varphi}{n}+\frac{2\pi k}{n}\right)}$ \\
+        $z^n=r^ne^{\imath n\varphi}$ \\
+        $\frac{1}{\imath} = -\imath$
+    \subsection{Logarithmen}
+        $\log_b(x^n) = n\log_b(x)$ \\
+        $\log_b(x\cdot y) = \log_b(x) + \log_b(y)$ \\
+        $\log_b(\frac{x}{y}) = \log_b(x) - \log_b(y)$ \\
+        $\log_b(x) = \frac{\log_n(x)}{\log_n(b)}$ 

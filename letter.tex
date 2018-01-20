@@ -1,0 +1,92 @@
+\documentclass%%
+%---------------------------------------------------------------------------
+  [fontsize=11pt,%%          Schriftgroesse
+%---------------------------------------------------------------------------
+% Satzspiegel
+   paper=a4,%%               Papierformat
+   enlargefirstpage=on,%%    Erste Seite anders
+   pagenumber=headright,%%   Seitenzahl oben mittig
+%---------------------------------------------------------------------------
+% Layout
+   headsepline=on,%%         Linie unter der Seitenzahl
+   parskip=half,%%           Abstand zwischen Absaetzen
+%---------------------------------------------------------------------------
+% Briefkopf und Anschrift
+   fromalign=left,%%        Plazierung des Briefkopfs
+   fromphone=on,%%           Telefonnummer im Absender
+   fromrule=off,%%           Linie im Absender (aftername, afteraddress)
+   fromfax=off,%%            Faxnummer
+   fromemail=on,%%          Emailadresse
+   fromurl=off,%%            Homepage
+   fromlogo=off,%%           Firmenlogo
+   %frombank=on,
+   addrfield=on,%%           Adressfeld fuer Fensterkuverts
+   backaddress=off,%%          ...und Absender im Fenster
+   subject=beforeopening,%%  Plazierung der Betreffzeile
+   locfield=narrow,%%        zusaetzliches Feld fuer Absender
+   foldmarks=off,%%           Faltmarken setzen
+   numericaldate=off,%%      Datum numerisch ausgeben
+   refline=narrow,%%         Geschaeftszeile im Satzspiegel
+   %priority=A,
+%---------------------------------------------------------------------------
+% Formatierung
+   draft=false%%                Entwurfsmodus
+]{scrlttr2}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{lmodern}
+\usepackage{ulem}
+\usepackage{hyperref}
+%\usepackage{booktabs}
+
+\usepackage{xcolor}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\LoadLetterOption{SN}
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\enclname}{Beilagen}
+%\renewcommand\arraystretch{1}
+
+%\makeatletter
+%\@setplength{toaddrvpos}{30mm}
+%\@setplength{toaddrhpos}{30mm}
+%\@setplength{toaddrheight}{130mm}
+%\@setplength{toaddrwidth}{130mm}
+%\@setplength{toaddrindent}{130mm}
+%\makeatother
+
+
+\setkomavar{fromname}{Martin Giger}
+\setkomavar{fromaddress}{Meine Adresse}
+\setkomavar{fromphone}{+41 99 999 99 99}
+\setkomavar{fromemail}{martin@humanoids.be}
+\setkomavar{fromurl}{https://humanoids.be}
+
+\setkomavar{place}{Mühlethurnen}
+\setkomavar{placeseparator}{, }
+\setkomavar{signature}{Martin Giger}
+
+\setkomavar{subject}{Brieftitel}
+
+\begin{document}
+    \begin{letter}{Empfänger\\Adresse}
+        \opening{}
+
+        Text
+
+        \closing{Freundliche Grüsse}
+    \end{letter}
+\end{document}

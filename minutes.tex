@@ -1,0 +1,39 @@
+% https://www.pirbot.com/mirrors/ctan/macros/latex/contrib/meetingmins/meetingmins.pdf
+\documentclass[12pt]{meetingminsde} % "agenda" als parameter um Traktanden zu generieren
+\usepackage[ngerman]{babel}
+\usepackage[utf8x]{inputenc}
+
+\setcommittee{Körper}
+
+\setmembers{
+    \chair{Vorsitzender},
+    W.~Eitere,
+    M.~Itglieder
+}
+
+\setpresent{
+    \chair{Vorsitzender}
+}
+
+\absent {
+    W.~Eitere
+}
+
+\alsopresent {
+    M.~Itglieder
+}
+
+\setdate{Datum}
+
+\begin{document}
+    \maketitle
+
+    \section{Traktandum}
+        \begin{items}
+            \item Punkte
+        \end{items}
+        \subsection{Unterpunk}
+            \subsubsection{Unter-Unterpunkt}
+
+    \nextmeeting{Nächstes Datum}
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass[10pt,a4paper,twocolumn]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage[intlimits]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{multirow}
+\geometry{a4paper,left=10mm,right=10mm, top=0.5cm, bottom=0.5cm}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Satz}
+\newtheorem{exception}{Ausnahme}
+
+% add subsubsubsection and number \paragraph and \subparagraph
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}}
+
+% lazyness
+\newcommand{\parfrac}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\vol}[1]{\mathrm{vol}_{#1}}
+\begin{document}
+\include{../generalutilities}
+\end{document}

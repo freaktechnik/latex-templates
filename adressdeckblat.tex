@@ -1,0 +1,95 @@
+\documentclass%%
+%---------------------------------------------------------------------------
+  [fontsize=12pt,%%          Schriftgroesse
+%---------------------------------------------------------------------------
+% Satzspiegel
+   paper=a4,%%               Papierformat
+   enlargefirstpage=on,%%    Erste Seite anders
+   pagenumber=headright,%%   Seitenzahl oben mittig
+%---------------------------------------------------------------------------
+% Layout
+   headsepline=on,%%         Linie unter der Seitenzahl
+   parskip=half,%%           Abstand zwischen Absaetzen
+%---------------------------------------------------------------------------
+% Briefkopf und Anschrift
+   fromalign=left,%%        Plazierung des Briefkopfs
+   fromphone=on,%%           Telefonnummer im Absender
+   fromrule=off,%%           Linie im Absender (aftername, afteraddress)
+   fromfax=off,%%            Faxnummer
+   fromemail=on,%%          Emailadresse
+   fromurl=off,%%            Homepage
+   fromlogo=off,%%           Firmenlogo
+   %frombank=on,
+   addrfield=on,%%           Adressfeld fuer Fensterkuverts
+   backaddress=off,%%          ...und Absender im Fenster
+   subject=beforeopening,%%  Plazierung der Betreffzeile
+   locfield=narrow,%%        zusaetzliches Feld fuer Absender
+   foldmarks=off,%%           Faltmarken setzen
+   numericaldate=off,%%      Datum numerisch ausgeben
+   refline=narrow,%%         Geschaeftszeile im Satzspiegel
+   %priority=A,
+%---------------------------------------------------------------------------
+% Formatierung
+   draft=off%%                Entwurfsmodus
+]{scrlttr2}
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+
+%\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{lmodern}
+\usepackage{ulem}
+%\usepackage{url}
+%\usepackage{booktabs}
+
+\LoadLetterOption{SN}
+
+\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand\arraystretch{1.1}
+
+%\makeatletter
+%\@setplength{toaddrvpos}{30mm}
+%\@setplength{toaddrhpos}{30mm}
+%\@setplength{toaddrheight}{130mm}
+%\@setplength{toaddrwidth}{130mm}
+%\@setplength{toaddrindent}{130mm}
+%\makeatother
+
+\setkomavar{fromname}{Martin Giger}
+\setkomavar{fromaddress}{Allmendstrasse 10 \\ 3127 Mühlethurnen}
+\setkomavar{fromphone}{+41 76 457 64 77}
+\setkomavar{fromemail}{martin@humanoids.be}
+%\setkomavar{frombank}{CH84 0900 0000 3050 4578 6}
+%\setkomavar{fromurl}{http://humanoids.be}
+
+\setkomavar{place}{Mühlethurnen}
+\setkomavar{placeseparator}{, den }
+\setkomavar{signature}{Martin Giger}
+
+%\setkomavar{subject}{Rechnung}
+%\setkomavar{customer}{0001}
+
+\setkomavar{toname}{SVA Zürich}
+\setkomavar{toaddress}{Röntgenstrasse 17 \\ Postfach \\ 8087 Zürich}
+
+%\firstfoot{\usekomavar*{fromurl}\usekomavar{fromurl}
+%	\hfill
+%	\parbox[t]{4cm}{\raggedleft \usekomavar*{frombank}:\\\usekomavar{frombank}}
+%
+%	}%
+%\AtBeginLetter{%
+%\renewcaptionname{ngerman}{\bankname}{Postkontonummer}
+%}%
+
+\begin{document}
+\LoadLetterOption{SN} 
+\renewcommand{\enclname}{Beilagen}
+\begin{letter}{SVA Zürich \\ Röntgenstrasse 17 \\ Postfach \\ 8087 Zürich}
+\opening{}
+\end{letter}
+\end{document}
