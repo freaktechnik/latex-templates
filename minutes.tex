@@ -1,39 +1,52 @@
-% https://www.pirbot.com/mirrors/ctan/macros/latex/contrib/meetingmins/meetingmins.pdf
-\documentclass[12pt]{meetingminsde} % "agenda" als parameter um Traktanden zu generieren
+\documentclass[10pt,a4paper]{article}
 \usepackage[ngerman]{babel}
 \usepackage[utf8x]{inputenc}
+\usepackage{minutes} % http://mirror.switch.ch/ftp/mirror/tex/macros/latex/contrib/minutes/minutes.pdf
 
-\setcommittee{Körper}
+\moderation{Vorsitzender}
+\minutetaker{Martin Giger}
+\participant{Jemand, Anderes}
+\guest{Gast, Noch einer}
+%\cc{}
+\missing{Jemand}
+\missingExcused{Entschuldigt}
+\missingNoExcuse{Unentschuldigt}
 
-\setmembers{
-    \chair{Vorsitzender},
-    W.~Eitere,
-    M.~Itglieder
-}
+\minutesdate{01.01.2018}
+\starttime{00:00}
+\endtime{00:00}
+\location{Ort}
 
-\setpresent{
-    \chair{Vorsitzender}
-}
+\title{Protokoll}
+\author{Martin Giger}
 
-\absent {
-    W.~Eitere
-}
-
-\alsopresent {
-    M.~Itglieder
-}
-
-\setdate{Datum}
-
+%\subtitle{Untertitel}
 \begin{document}
-    \maketitle
+    \begin{Minutes}{Titel}
+        \maketitle
 
-    \section{Traktandum}
-        \begin{items}
-            \item Punkte
-        \end{items}
-        \subsection{Unterpunk}
-            \subsubsection{Unter-Unterpunkt}
+        \topic{Traktandum}
+            \vote{Entschheidung}{1}{1}{0}[Resultat]
+            \decisiontheme{e}{Etwas}
+            \decision{e}{Wird getan}[Ganz viel Beschreibung]
+            \task{Jemand}{tut etwas}
+            \task*{Etwas muss getan werden}
+            \subtopic{Unterpunk}
+                \begin{Argumentation}
+                    \pro Dafür
+                    \contra Dagegen
+                    \result asdf
+                \end{Argumentation}
+                \opinion{Jemand}{hat eine Meinung}
+                \subsubtopic{Unter-Unterpunk}
+        \minitopic{Kleines Thema}
+        \addtopic{Aside}
 
-    \nextmeeting{Nächstes Datum}
+        %attachment[ref]{Title}{seiten}
+
+        \topic{Nächste Sitzung}
+        \schedule{2018/01/01}[00:00]{Nächstes Datum}[Ausfürhrliche Beschreibung]
+
+        \listofattachments
+    \end{Minutes}
 \end{document}
