@@ -8,3 +8,8 @@
 *.out
 *.glo
 *.idx
+*.maf
+*.minAtt
+*.mtc*
+*.ptc*
+*.toc
