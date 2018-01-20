@@ -3,26 +3,24 @@
 \usepackage[utf8x]{inputenc}
 \usepackage{minutes} % http://mirror.switch.ch/ftp/mirror/tex/macros/latex/contrib/minutes/minutes.pdf
 
-\moderation{Vorsitzender}
-\minutetaker{Martin Giger}
-\participant{Jemand, Anderes}
-\guest{Gast, Noch einer}
-%\cc{}
-\missing{Jemand}
-\missingExcused{Entschuldigt}
-\missingNoExcuse{Unentschuldigt}
-
-\minutesdate{01.01.2018}
-\starttime{00:00}
-\endtime{00:00}
-\location{Ort}
-
 \title{Protokoll}
 \author{Martin Giger}
 
 %\subtitle{Untertitel}
 \begin{document}
     \begin{Minutes}{Titel}
+      \moderation{Vorsitzender}
+      \minutetaker{Martin Giger}
+      \participant{Jemand, Anderes}
+      %\guest{Gast, Noch einer}
+      %\cc{}
+      \missing[Entschuldigt]{Unentschuldigt}
+
+      \minutesdate{01.01.2018}
+      \starttime{00:00}
+      \endtime{00:00}
+      \location{Ort}
+
         \maketitle
 
         \topic{Traktandum}
@@ -43,6 +41,7 @@
         \addtopic{Aside}
 
         %attachment[ref]{Title}{seiten}
+        %postscript{Nachtrag}
 
         \topic{Nächste Sitzung}
         \schedule{2018/01/01}[00:00]{Nächstes Datum}[Ausfürhrliche Beschreibung]
