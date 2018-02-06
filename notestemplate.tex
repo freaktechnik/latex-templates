@@ -6,6 +6,8 @@
 \usepackage{amssymb}
 \usepackage{geometry}
 \usepackage{multirow}
+% https://mirror.switch.ch/ftp/mirror/tex/macros/latex/contrib/siunitx/siunitx.pdf
+\usepackage{siunitx}
 \geometry{a4paper,left=10mm,right=10mm, top=0.5cm, bottom=0.5cm}
 \newtheorem{definition}{Definition}
 \newtheorem{theorem}{Satz}
@@ -20,5 +22,5 @@
 \newcommand{\parfrac}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\vol}[1]{\mathrm{vol}_{#1}}
 \begin{document}
-\include{../generalutilities}
+    \include{./generalutilities}
 \end{document}
