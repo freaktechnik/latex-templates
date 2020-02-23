@@ -1,10 +1,23 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[ngerman]{babel}
 \usepackage[utf8x]{inputenc}
+\usepackage{hyperref}
 \usepackage{minutes} % http://mirror.switch.ch/ftp/mirror/tex/macros/latex/contrib/minutes/minutes.pdf
+\usepackage{pdfpages}
+\usepackage{siunitx}
+\usepackage[autostyle,german=swiss]{csquotes}
+
+\sisetup{
+    group-separator = ',
+    round-mode = places,
+    round-precision = 2,
+    round-integer-to-decimal
+}
 
 \title{Protokoll}
 \author{Martin Giger}
+
+\setlength{\responsiblelength}{0.3\linewidth}
 
 %\subtitle{Untertitel}
 \begin{document}
@@ -29,6 +42,7 @@
             \decision{e}{Wird getan}[Ganz viel Beschreibung]
             \task{Jemand}{tut etwas}
             \task*{Etwas muss getan werden}
+            \enquote{Ein Betrag} \SI{1500}{CHF}
             \subtopic{Unterpunk}
                 \begin{Argumentation}
                     \pro Dafür
@@ -44,8 +58,11 @@
         %postscript{Nachtrag}
 
         \topic{Nächste Sitzung}
-        \schedule{2018/01/01}[00:00]{Nächstes Datum}[Ausfürhrliche Beschreibung]
+        \schedule{2018/01/01}[00:00]{Nächstes Datum}[Ausführliche Beschreibung]
 
-        \listofattachments
+        \newpage{}
+        \minitopic{Anhänge}
+        \listofattachments{}
+        %\setcounter{page}{7}
     \end{Minutes}
 \end{document}
